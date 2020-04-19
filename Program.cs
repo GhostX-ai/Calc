@@ -19,5 +19,9 @@ namespace Calc
         {
             return (dynamic)x - (dynamic)y;
         }
+        static public C divide(C x, C y)
+        {
+            return (dynamic)x / (dynamic)y;
+        }
     }
 }
