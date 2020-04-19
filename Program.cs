@@ -15,5 +15,9 @@ namespace Calc
         {
             return (dynamic)x + (dynamic)y;
         }
+        static public C minus(C x, C y)
+        {
+            return (dynamic)x - (dynamic)y;
+        }
     }
 }
