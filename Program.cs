@@ -12,14 +12,12 @@ namespace HomeWork14
             bool sss = true;
             while (sss)
             {
-                Console.ForegroundColor = ConsoleColor.Yellow;
                 System.Console.WriteLine("Choose your operations(*,/,+,-):");
                 System.Console.WriteLine("1.Multiply(*):");
                 System.Console.WriteLine("2.Divide(/):");
                 System.Console.WriteLine("3.Add(+):");
                 System.Console.WriteLine("4.Minus(-):");
                 System.Console.WriteLine("5.Exit:");
-                Console.ForegroundColor = ConsoleColor.White;
 
                 string choice = Console.ReadLine();
                 switch (choice)
@@ -33,11 +31,9 @@ namespace HomeWork14
                             double y = Convert.ToDouble(Console.ReadLine());
                             Operation<double> mult = Multiply<double>;
                             double result = mult.Invoke(x, y);
-                            Console.ForegroundColor = ConsoleColor.Green;
                             System.Console.WriteLine("======================");
                             System.Console.WriteLine($"Result is:{result}");
                             System.Console.WriteLine("======================");
-                            Console.ForegroundColor = ConsoleColor.White;
                         };
                         break;
 
@@ -51,19 +47,15 @@ namespace HomeWork14
                             {
                                 Operation<double> div = Divide<double>;
                                 double result = div.Invoke(x, y);
-                                Console.ForegroundColor = ConsoleColor.Green;
                                 System.Console.WriteLine("======================");
                                 System.Console.WriteLine($"Result is:{result}");
                                 System.Console.WriteLine("======================");
-                                Console.ForegroundColor = ConsoleColor.White;
                             }
                             else
                             {
-                                Console.ForegroundColor = ConsoleColor.Red;
                                 System.Console.WriteLine("======================");
                                 Console.WriteLine("You are writed wrong number, 0 can't divide any number!!!");
                                 System.Console.WriteLine("======================");
-                                Console.ForegroundColor = ConsoleColor.White;
                             }
 
                         }; break;
@@ -76,11 +68,9 @@ namespace HomeWork14
                             double y = Convert.ToDouble(Console.ReadLine());
                             Operation<double> sum = Sum<double>;
                             double result = sum.Invoke(x, y);
-                            Console.ForegroundColor = ConsoleColor.Green;
                             System.Console.WriteLine("======================");
                             System.Console.WriteLine($"Result is: {result}");
                             System.Console.WriteLine("======================");
-                            Console.ForegroundColor = ConsoleColor.White;
                         }; break;
 
                     case "4":
@@ -91,22 +81,18 @@ namespace HomeWork14
                             double y = Convert.ToDouble(Console.ReadLine());
                             Operation<double> min = Minus<double>;
                             double result = min.Invoke(x, y);
-                            Console.ForegroundColor = ConsoleColor.Green;
                             System.Console.WriteLine("======================");
                             System.Console.WriteLine($"Result is: {result}");
                             System.Console.WriteLine("======================");
-                            Console.ForegroundColor = ConsoleColor.White;
                         }; break;
 
 
                     case "5": sss = false; break;
 
                     default:
-                        Console.ForegroundColor = ConsoleColor.Red;
                         System.Console.WriteLine("======================");
                         Console.WriteLine("You are writed wrong number!!!");
                         System.Console.WriteLine("======================");
-                        Console.ForegroundColor = ConsoleColor.White;
                         break;
                 }
             }
