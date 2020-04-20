@@ -91,7 +91,7 @@ namespace HomeWork14
 
                     default:
                         System.Console.WriteLine("======================");
-                        Console.WriteLine("You are writed wrong number!!!");
+                        Console.WriteLine("You wrote wrong number!!!");
                         System.Console.WriteLine("======================");
                         break;
                 }
@@ -111,7 +111,6 @@ namespace HomeWork14
         {
             return (dynamic)x + (dynamic)y;
         }
-
         static T Minus<T>(T x, T y)
         {
             return (dynamic)x - (dynamic)y;
